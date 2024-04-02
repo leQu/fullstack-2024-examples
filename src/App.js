@@ -1,10 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import moment from "moment";
+
+import logo from "./logo.svg";
+import MainHeader from "./components/MainHeader";
+import WordListComponent from "./components/WordListComponent";
+import "./App.css";
+import MySmartComponent from "./components/MySmartComponent";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <MainHeader title="Hej alla" description="Detta är vårt nya projekt" />
+        <MainHeader title="Hej Alex" description="Kul med ett nytt projekt" />
+        <MySmartComponent initialCount={100} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,7 +23,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <WordListComponent words={["banan", "melon", "kiwi", "citron"]} />
+          Learn React {moment().format("dd YYYY mm")}
         </a>
       </header>
     </div>
