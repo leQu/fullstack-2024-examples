@@ -1,7 +1,6 @@
 {
-  "name": "my-first-react-project",
+  "name": "fullstack-2024-examples",
   "version": "0.1.0",
-  "homepage": "https://lequ.github.io/my-first-react-project",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -18,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
