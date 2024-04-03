@@ -5,13 +5,14 @@ import MainHeader from "./components/MainHeader";
 import WordListComponent from "./components/WordListComponent";
 import "./App.css";
 import MySmartComponent from "./components/MySmartComponent";
+import UntrackedComponent from "./components/UntrackedComponent";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <MainHeader title="Hej alla" description="Detta är vårt nya projekt" />
-        <MainHeader title="Hej Alex" description="Kul med ett nytt projekt" />
+        <UntrackedComponent />
         <MySmartComponent initialCount={100} />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
