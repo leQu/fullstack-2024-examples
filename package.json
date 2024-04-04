@@ -1,5 +1,6 @@
 {
   "name": "fullstack-2024-examples",
+  "homepage": "https://lequ.github.io/fullstack-2024-examples",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

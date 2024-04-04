@@ -1,5 +1,3 @@
-import React from "react";
-
 function MainHeader({ title, description }) {
   const newTitle = title.toUpperCase();
 
