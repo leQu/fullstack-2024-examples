@@ -14,20 +14,17 @@ const reducer = (state, action) => {
   }
 };
 
-// Step 2: Define initial state
-const initialState = { count: 0 };
-
 // Step 3: Create component using useReducer
 function Counter() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, { count: 0, level: "Noob" });
 
   return (
-    <div>
+    <>
       <p>Count: {state.count}</p>
       <button onClick={() => dispatch({ type: "INCREMENT" })}>Increment</button>
       <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrement</button>
       <button onClick={() => dispatch({ type: "RESET" })}>Reset</button>
-    </div>
+    </>
   );
 }
 

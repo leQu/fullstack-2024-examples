@@ -8,32 +8,25 @@ class MySmartComponent extends React.Component {
     // this.incremenetCounter = this.incremenetCounter.bind(this);
   }
 
-  handleResize = () => {
-    console.log("RESIZE");
-  };
+  handleResize = () => {};
 
   componentDidMount() {
-    console.log("COMPONENT DID MOUNT");
     window.addEventListener("resize", this.handleResize);
   }
 
   componentWillUnmount() {
-    console.log("COMPONENT WILL UNMOUNT");
     window.removeEventListener("resize", this.handleResize);
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.counter !== this.state.counter) {
-      console.log("Counter has changed");
       if (this.state.counter > 200) {
         this.setState({ level: "Pro" });
       }
-      console.log("COMPONENT DID UPDATE");
     }
   }
 
   render() {
-    console.log("RENDER");
     return (
       <div>
         <h1>Counter: {this.state.counter}</h1>

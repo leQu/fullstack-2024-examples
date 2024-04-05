@@ -9,7 +9,6 @@ class MySmartChild extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps);
     if (nextProps.count > 110) {
       return true;
     }
@@ -18,7 +17,6 @@ class MySmartChild extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.count !== this.props.count) {
-      console.log("Count has changed");
       if (this.props.count > 110) {
         this.setState({ level: "Pro" });
       }

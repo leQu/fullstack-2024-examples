@@ -1,4 +1,4 @@
-function MainHeader({ title, description }) {
+function MainHeader({ title = "Hej", description }) {
   const newTitle = title.toUpperCase();
 
   const state = {

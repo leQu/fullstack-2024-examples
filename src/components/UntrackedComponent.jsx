@@ -1,12 +1,23 @@
-import React from "react";
+import { useEffect, useState, useContext } from "react";
+import { CounterContext } from "../App";
 
-const UntrackedComponent = () => {
+function UntrackedComponent() {
+  useEffect(() => {
+    console.log("UntrackedComponent mounted");
+    return () => {
+      console.log("UntrackedComponent unmounted");
+    };
+  });
+
+  const globalCounter = useContext(CounterContext);
+  const [count, setCount] = useState(globalCounter);
+
   return (
     <div>
-      <h1>Hello, I'm the Tracked component</h1>
-      <p>I'm very happy about that 🤗</p>
+      <p>Du klickade {count} gånger</p>
+      <button onClick={() => setCount(count + 1)}>Klicka mig</button>
     </div>
   );
-};
+}
 
 export default UntrackedComponent;
