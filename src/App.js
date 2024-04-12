@@ -7,19 +7,28 @@ import WordListComponent from "./components/WordListComponent";
 import "./App.css";
 import MySmartComponent from "./components/MySmartComponent";
 import UntrackedComponent from "./components/UntrackedComponent";
+import ReducerComponent from "./components/ReducerComponent";
 import CustomButton from "./components/CustomButton";
+import TitleUpdater from "./components/TitleUpdater";
+import ToDoListComponent from "./components/ToDoListComponent";
 
 export const CounterContext = React.createContext();
 export const CounterContextUpdater = React.createContext();
 
 function App() {
+  const simpleFunction = (event) => {
+    console.log("Simple function", event);
+  };
   return (
     <CounterContext.Provider value={88}>
       <CounterContextUpdater.Provider value={88}>
         <div className="App">
           <header className="App-header">
             <MainHeader description="Detta är vårt nya projekt" />
-            <UntrackedComponent />
+            <ToDoListComponent />
+            <TitleUpdater />
+            <ReducerComponent />
+            <UntrackedComponent simpleFunction={simpleFunction} />
             <MySmartComponent initialCount={100} />
             <img src={logo} className="App-logo" alt="logo" />
             <p>
@@ -34,8 +43,8 @@ function App() {
               <WordListComponent words={["banan", "melon", "kiwi", "citron"]} />
               Learn React {moment().format("dd YYYY mm")}
             </a>
-            <CustomButton onClick={() => console.log("Klick!")}>
-              Klicka här
+            <CustomButton customClick={() => console.log("Klick!")}>
+              <p>Hej</p>
             </CustomButton>
           </header>
         </div>

@@ -1,7 +1,15 @@
 import React from "react";
 
-const CustomButton = ({ onClick, children }) => {
-  return <button onClick={onClick}>{children}</button>;
+const CustomButton = ({ customClick, children }) => {
+  return (
+    <button
+      id="crap"
+      data-info-stuff="some info"
+      onClick={(event) => customClick(event)}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default CustomButton;
