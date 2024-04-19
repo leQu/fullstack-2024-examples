@@ -3,14 +3,22 @@ import { useState } from "react";
 export default function ToDoListComponent() {
   const [tasks, setTasks] = useState([]);
 
+  const todoListStyping = {
+    color: "red",
+    borderRadius: "5px",
+    padding: "10px",
+    backgroundColor: "lightblue",
+  };
+
   return (
     <div>
-      <h1>ToDo List</h1>
+      <h1 className="mainTitle">ToDo List</h1>
       <ul>
         {tasks.map((task, index) => (
           <>
             <li key={index}>{task.text}</li>
             <button
+              style={{ color: "red" }}
               onClick={() => setTasks(tasks.filter((_, i) => i !== index))}
             >
               Remove
@@ -18,7 +26,10 @@ export default function ToDoListComponent() {
           </>
         ))}
       </ul>
-      <button onClick={() => setTasks([...tasks, { text: "new task" }])}>
+      <button
+        style={todoListStyping}
+        onClick={() => setTasks([...tasks, { text: "new task" }])}
+      >
         Add task
       </button>
     </div>

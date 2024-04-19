@@ -1,3 +1,5 @@
+import styles from "../styles/MainHeader.module.css";
+
 function MainHeader({ title = "Hej", description }) {
   const newTitle = title.toUpperCase();
 
@@ -7,7 +9,7 @@ function MainHeader({ title = "Hej", description }) {
 
   return (
     <header>
-      <h1>{newTitle}</h1>
+      <h1 className={styles.MainHeader}>{newTitle}</h1>
       <p>{description}</p>
       <p>{state.initialCount}</p>
     </header>
