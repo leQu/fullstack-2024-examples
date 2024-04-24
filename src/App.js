@@ -11,6 +11,7 @@ import ReducerComponent from "./components/ReducerComponent";
 import CustomButton from "./components/CustomButton";
 import TitleUpdater from "./components/TitleUpdater";
 import ToDoListComponent from "./components/ToDoListComponent";
+import MultiFieldForm from "./components/MultiFieldForm";
 
 export const CounterContext = React.createContext();
 export const CounterContextUpdater = React.createContext();
@@ -26,6 +27,9 @@ function App() {
           <header className="App-header">
             <MainHeader description="Detta är vårt nya projekt" />
             <ToDoListComponent />
+
+            <MultiFieldForm />
+
             <TitleUpdater />
             <ReducerComponent />
             <UntrackedComponent simpleFunction={simpleFunction} />

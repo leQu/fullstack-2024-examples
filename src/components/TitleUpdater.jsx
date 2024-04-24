@@ -9,7 +9,9 @@ export default function TitleChanger() {
 
   return (
     <>
-      <p>Du klickade {count.count} gånger</p>
+      <p className="bg-red-900 rounded-full p-4">
+        Du klickade {count.count} gånger
+      </p>
       <button
         onClick={() =>
           setCount({ count: count.count + 1, totalCount: count.totalCount + 1 })
@@ -18,6 +20,8 @@ export default function TitleChanger() {
         Klicka mig
       </button>
       <button
+        className="text-color-red-900 p-4"
+        style={{ color: "red", padding: "12px", margin: "10px" }}
         onClick={() =>
           setCount({ count: count.count - 1, totalCount: count.totalCount + 1 })
         }
