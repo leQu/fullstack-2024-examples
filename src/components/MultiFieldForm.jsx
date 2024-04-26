@@ -1,21 +1,15 @@
-import React, { useState } from "react";
+import useForm from "../hooks/useForm";
 
 const MultiFieldForm = () => {
-  const [fieldData, setFieldData] = useState({
+  const [values, handleChange] = useForm({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setFieldData({ ...fieldData, [name]: value });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Submit", fieldData);
+    console.log("Submit", values);
   };
 
   return (
@@ -24,14 +18,25 @@ const MultiFieldForm = () => {
       className="flex flex-col gap-2 my-8 text-black"
     >
       <input
+        value={values.name}
         name="name"
         onChange={handleChange}
         type="text"
         className="p-2"
         placeholder="Namn"
       />
-      <input name="email" onChange={handleChange} type="email" />
-      <textarea name="message" onChange={handleChange} type="text" />
+      <input
+        name="email"
+        onChange={handleChange}
+        type="email"
+        value={values.email}
+      />
+      <textarea
+        name="message"
+        onChange={handleChange}
+        type="text"
+        value={values.message}
+      />
       <button type="submit">Submit</button>
     </form>
   );

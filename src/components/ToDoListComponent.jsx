@@ -1,7 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
+
+import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function ToDoListComponent() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useLocalStorage("tasks", []);
 
   const todoListStyping = {
     color: "red",
