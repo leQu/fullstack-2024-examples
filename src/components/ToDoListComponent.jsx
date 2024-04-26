@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 import useLocalStorage from "../hooks/useLocalStorage";
 
 export default function ToDoListComponent() {
