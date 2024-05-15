@@ -12,11 +12,11 @@ import ToDoListComponent from "../components/ToDoListComponent";
 import MultiFieldForm from "../components/MultiFieldForm";
 
 import Navbar from "../components/Navbar";
+import { useTheme } from "../hooks/useTheme";
 
 export default function Examples() {
   const { name } = useParams();
-
-  console.log(name);
+  const [theme, toggleTheme] = useTheme();
 
   const simpleFunction = (event) => {
     console.log("Simple function", event);
@@ -25,7 +25,7 @@ export default function Examples() {
     <div>
       <Navbar />
       <div className="App">
-        <header className="App-header">
+        <header className={`App-header ${theme}`}>
           <MainHeader description="Detta är vårt nya projekt" />
           <ToDoListComponent />
           {name === "form" && <MultiFieldForm />}
