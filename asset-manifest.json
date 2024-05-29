@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/fullstack-2024-examples/static/css/main.f855e6bc.css",
-    "main.js": "/fullstack-2024-examples/static/js/main.27f70924.js",
+    "main.css": "/fullstack-2024-examples/static/css/main.8e12669d.css",
+    "main.js": "/fullstack-2024-examples/static/js/main.03aa3dc4.js",
     "static/js/453.b6e6d722.chunk.js": "/fullstack-2024-examples/static/js/453.b6e6d722.chunk.js",
     "static/media/logo.svg": "/fullstack-2024-examples/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/fullstack-2024-examples/index.html",
-    "main.f855e6bc.css.map": "/fullstack-2024-examples/static/css/main.f855e6bc.css.map",
-    "main.27f70924.js.map": "/fullstack-2024-examples/static/js/main.27f70924.js.map",
+    "main.8e12669d.css.map": "/fullstack-2024-examples/static/css/main.8e12669d.css.map",
+    "main.03aa3dc4.js.map": "/fullstack-2024-examples/static/js/main.03aa3dc4.js.map",
     "453.b6e6d722.chunk.js.map": "/fullstack-2024-examples/static/js/453.b6e6d722.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.27f70924.js"
+    "static/css/main.8e12669d.css",
+    "static/js/main.03aa3dc4.js"
   ]
 }
