@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./views/Home";
 import Examples from "./views/Examples";
@@ -14,12 +14,12 @@ function App() {
   return (
     <CounterContext.Provider value={[88]}>
       <ThemeProvider>
-        <BrowserRouter>
+        <Router baseName="/fullstack-2024-examples">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="examples/:name" element={<Examples />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </ThemeProvider>
     </CounterContext.Provider>
   );
