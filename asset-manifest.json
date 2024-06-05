@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/fullstack-2024-examples/static/css/main.d52391ac.css",
-    "main.js": "/fullstack-2024-examples/static/js/main.8b45921b.js",
+    "main.js": "/fullstack-2024-examples/static/js/main.c19e41ab.js",
     "static/js/453.b6e6d722.chunk.js": "/fullstack-2024-examples/static/js/453.b6e6d722.chunk.js",
     "static/media/logo.svg": "/fullstack-2024-examples/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/fullstack-2024-examples/index.html",
     "main.d52391ac.css.map": "/fullstack-2024-examples/static/css/main.d52391ac.css.map",
-    "main.8b45921b.js.map": "/fullstack-2024-examples/static/js/main.8b45921b.js.map",
+    "main.c19e41ab.js.map": "/fullstack-2024-examples/static/js/main.c19e41ab.js.map",
     "453.b6e6d722.chunk.js.map": "/fullstack-2024-examples/static/js/453.b6e6d722.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d52391ac.css",
-    "static/js/main.8b45921b.js"
+    "static/js/main.c19e41ab.js"
   ]
 }
